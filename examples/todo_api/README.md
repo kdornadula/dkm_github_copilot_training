@@ -14,9 +14,11 @@ A simple RESTful API for managing todo items, built with Python and Flask. This 
 
 ```bash
 cd examples/todo_api
-pip install flask
+pip install flask  # Install Flask first
 python app.py
 ```
+
+**Note**: This example requires Flask to be installed. If you don't have Flask, you can still study the code structure and patterns.
 
 ## 📡 API Endpoints
 
