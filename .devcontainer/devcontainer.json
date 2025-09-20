@@ -1,0 +1,43 @@
+{
+	"name": "GitHub Copilot Training Environment",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-python.python",
+				"ms-vscode.vscode-typescript-next",
+				"ms-vscode.vscode-json",
+				"ms-toolsai.jupyter",
+				"ms-vscode.remote-repositories",
+				"GitHub.vscode-pull-request-github"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				},
+				"github.copilot.enable": {
+					"*": true,
+					"yaml": true,
+					"plaintext": true,
+					"markdown": true
+				}
+			}
+		}
+	},
+	"postCreateCommand": "echo 'Welcome to GitHub Copilot Training Environment!' && echo 'GitHub Copilot extensions are ready to use.'",
+	"remoteUser": "codespace"
+}
